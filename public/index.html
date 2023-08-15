@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
     <title>Admin Market-Place</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <label for="select-options">Sorting by:</label>
-            <select name="" id="select-options">
-                <option value="by-id">id</option>
-            </select>
+  </head>
+  <body>
+    <main class="w-full h-full">
+      <nav class="flex justify-between items-center p-3 bg-slate-300">
+        <div class="p-2 bg-slate-500 rounded-lg flex items-center gap-2 focus-within:bg-slate-600">
+          <label for="select-options" class="text-gray-100">Sorting by: </label>
+          <select
+            name=""
+            id="select-options"
+            class="w-20 px-2 py-0.5 rounded-lg "
+          >
+            <option value="by-id">Id</option>
+            <option value="by-name">Name</option>
+            <option value="by-price">Price</option>
+          </select>
         </div>
-        <div>Search</div>
-        <div>Add new Product</div>
-    </nav>
+        <div>
+          <input type="text" class="border-2 border-slate-400 focus:border-slate-500 outline-none rounded-lg p-2" />
+        </div>
+        <div>
+          <button id="addNewProduct" class="bg-slate-500 active:bg-slate-600 p-2 rounded-lg text-gray-100">
+            <span class="font-extrabold">+</span> New Product
+          </button>
+        </div>
+      </nav>
 
-    <main>
-        afisare produse in linie tiptabel sumar
+      <section id="modalSection" class=" hidden absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-3/4 h-auto m-auto bg-slate-200 rounded-lg p-3">
+        <h1 class="flex justify-center text-xl underline font-bold">Add a new product</h1>
+        <form action="" class="flex flex-col gap-2">
+            <div>
+                <label for="title">Title</label>
+                <input id="title" type="text" class="border-2 border-slate-300 rounded-lg px-2 py-1 focus:border-slate-400 outline-none" />
+            </div>
+            <div class="flex">
+                <label for="description" class="flex items-center">Description</label>
+                <textarea id="description"  class="border-2 border-slate-300 rounded-lg px-2 py-1 focus:border-slate-400 outline-none" ></textarea>
+            </div>
+            <button class="bg-slate-500 active:bg-slate-600 p-2  w-fit rounded-lg text-gray-100">Upload a picture</button>
+            <div class="flex gap-2">
+                <div>
+                    <label for="price">Price</label>
+                    <input id="price" type="text" class="border-2 border-slate-300 rounded-lg px-2 py-1 focus:border-slate-400 outline-none" />
+                </div>
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input id="quantity" type="text" class="border-2 border-slate-300 rounded-lg px-2 py-1 focus:border-slate-400 outline-none" /> 
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="bg-slate-500 active:bg-slate-600 p-2  w-fit rounded-lg text-gray-100">Add New Product</button>
+            </div>
+        </form>
+      </section>
+
+      <section
+        id="displayData"
+        class="w-4/5 bg-slate-300 h-auto mx-auto my-20 rounded-lg p-3"
+      >
+        da
+      </section>
     </main>
-</body>
+
+    <script src="main.js"></script>
+  </body>
 </html>
